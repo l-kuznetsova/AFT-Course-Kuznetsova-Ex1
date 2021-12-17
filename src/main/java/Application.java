@@ -39,13 +39,13 @@ public class Application {
             System.out.println("Доброе утро, " + name + "!");
         }
         else if (hour >= 12 && hour <= 15 && minute >= 0 && minute <= 59) {
-            System.out.println("Добрый день," + name + "!");
+            System.out.println("Добрый день, " + name + "!");
         }
         else if (hour >= 16 && hour <= 22 && minute >= 0 && minute <= 59) {
-            System.out.println("Добрый вечер," + name + "!");
+            System.out.println("Добрый вечер, " + name + "!");
         }
         else if (hour >= 23 && hour <=24 || hour >= 0 && hour <= 4 && minute >= 0 && minute <= 59){
-            System.out.println("Доброй ночи," + name + "!");
+            System.out.println("Доброй ночи, " + name + "!");
         }
         else{
             System.out.println("Вы указали некорректное значение");
