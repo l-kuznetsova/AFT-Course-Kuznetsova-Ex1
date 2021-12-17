@@ -38,16 +38,16 @@ public class Application {
         if (hour >= 5 && hour <= 11 && minute >= 0 && minute <= 59) {
             System.out.println("Доброе утро, " + name + "!");
         }
-        if (hour >= 12 && hour <= 15 && minute >= 0 && minute <= 59) {
+        else if (hour >= 12 && hour <= 15 && minute >= 0 && minute <= 59) {
             System.out.println("Добрый день," + name + "!");
         }
-        if (hour >= 16 && hour <= 22 && minute >= 0 && minute <= 59) {
+        else if (hour >= 16 && hour <= 22 && minute >= 0 && minute <= 59) {
             System.out.println("Добрый вечер," + name + "!");
         }
-        if (hour >= 23 && hour <=24 || hour >= 0 && hour <= 4 && minute >= 0 && minute <= 59){
+        else if (hour >= 23 && hour <=24 || hour >= 0 && hour <= 4 && minute >= 0 && minute <= 59){
             System.out.println("Доброй ночи," + name + "!");
         }
-        else if (hour > 24 && hour < 0 && minute < 0 && minute > 59){
+        else{
             System.out.println("Вы указали некорректное значение");
         }
     }
