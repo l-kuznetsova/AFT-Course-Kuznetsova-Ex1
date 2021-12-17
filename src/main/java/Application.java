@@ -47,7 +47,7 @@ public class Application {
         if (hour >= 23 && hour <=24 || hour >= 0 && hour <= 4 && minute >= 0 && minute <= 59){
             System.out.println("Доброй ночи," + name + "!");
         }
-        else {
+        else if (hour > 24 && hour < 0 && minute < 0 && minute > 59){
             System.out.println("Вы указали некорректное значение");
         }
     }
