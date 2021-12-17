@@ -12,16 +12,17 @@ public class Application {
         int a = scr.nextInt();
         System.out.println("Введите число b: ");
         int b = scr.nextInt();
-        int c = a/b;
+        int c = a / b;
         System.out.println("Результат деления: " + c);
 // 3. Написать функцию, которая принимает на вход целое число и выводит на экран является ли оно четным
         System.out.println("Задание 3:");
         System.out.println("Введите число: ");
         int num = scr.nextInt();
-        if (num % 2 == 0){
-            System.out.println("Введенное число чётное");}
-        else {
-            System.out.println("Введенное число нечётное");}
+        if (num % 2 == 0) {
+            System.out.println("Введенное число чётное");
+        } else {
+            System.out.println("Введенное число нечётное");
+        }
 // 4. Написать функцию, внутрь которой передается 3 переменных текущего времени (часы, минуты, секунды) и имя пользователя. В результате вызова этой функции на экран выводится:
 //        Если время от 5 до 12 -> "Доброе утро, {username}"
 //        Если время от 12 до 16 -> "Добрый день, {username}"
@@ -29,8 +30,25 @@ public class Application {
 //        Если время от 23 до 5 -> "Доброй ночи, {username}"
         System.out.println("Задание 4:");
         System.out.print("Ваше имя: ");
-        String name = scr.nextLine();
-
-
+        String name = scr.next();
+        System.out.print("Сколько сейчас время? Укажите часы (число от 0 до 23): ");
+        int hour = scr.nextInt();
+        System.out.print("Укажите минуты (число от 0 до 59): ");
+        int minute = scr.nextInt();
+        if (hour >= 5 && hour <= 11 && minute >= 0 && minute <= 59) {
+            System.out.println("Доброе утро, " + name + "!");
+        }
+        if (hour >= 12 && hour <= 15 && minute >= 0 && minute <= 59) {
+            System.out.println("Добрый день," + name + "!");
+        }
+        if (hour >= 16 && hour <= 22 && minute >= 0 && minute <= 59) {
+            System.out.println("Добрый вечер," + name + "!");
+        }
+        if (hour >= 23 && hour <=24 || hour >= 0 && hour <= 6 && minute >= 0 && minute <= 59){
+            System.out.println("Доброй ночи," + name + "!");
+        }
+        else {
+            System.out.println("Вы указали некорректное значение");
+        }
     }
 }
